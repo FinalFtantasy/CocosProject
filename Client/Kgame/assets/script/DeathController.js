@@ -67,8 +67,14 @@ var con = cc.Class({
 
     onTouchStart : function (event) {
         console.log("death on touch start")
-        this.node.active = false
-        this.game.reStart()
+        if(this.game.gameModel == 1)
+        {
+            this.node.active = false
+            this.game.reStart()
+        }else{
+            cc.director.loadScene("KGameRoom")
+        }
+        
     }
 
     // update (dt) {},

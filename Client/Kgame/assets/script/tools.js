@@ -10,25 +10,34 @@ var tool = {
         return tab
     },
 
-    dump : function (object,n){
+    dump : function (object,n,key){
+        var name
+        if(key)
+            name = key
+        else
+            name = "objeckt"
         if(!n)
         {
             n = 1
-            cc.log("==>[dump] var object = {")
         }
         else
             n = n + 1
 
+        cc.log("==>[dump] var " + name + " = {")
         for(var v in object)
         {
             if (typeof object[v] == "object")
             {
 
-                this.dump(object[v],n)
+                this.dump(object[v],n,v)
             }
-            else
-                cc.log(this.getTabl(n) + v + "[" + typeof object[v] + "] : " + object[v])
+            else if(typeof object[v] == "function")
+            {
+                cc.log(this.getTabl(n) + '['+ v +']: ' + "[" + typeof object[v] + "] :")
+            }else
+                cc.log(this.getTabl(n) + '['+ v +']: ' + "[" + typeof object[v] + "] :" + object[v])
         }
+        cc.log(this.getTabl(n)+'}')
     },
 
     clamp: function (value, max,min){
