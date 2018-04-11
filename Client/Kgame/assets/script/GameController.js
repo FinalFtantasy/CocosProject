@@ -12,8 +12,8 @@ var Tool = require("tools")
 var Socket = require("Socket")
 var config = require("Config")
 var MAXHANDCARD = 4
-var progressTime = 10
-var USETIMELINE = false
+var progressTime = 15
+var USETIMELINE = true
 cc.Class({
     extends: cc.Component,
 
@@ -181,7 +181,7 @@ cc.Class({
     onDestroy: function () {
         cc.audioEngine.stop(this.currentAudio);
     },
-    
+
     showKingView(){
         this.handCardNode.active = false
     },
@@ -549,7 +549,7 @@ cc.Class({
     },
 
     update (dt) {
-        if(USETIMELINE && this.curProgressTime >0)
+        if(USETIMELINE && !this.isOver && this.curProgressTime >0)
         {
             this.curProgressTime -= dt
             if(this.curProgressTime <=0 )

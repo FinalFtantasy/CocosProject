@@ -85,7 +85,8 @@ cc.Class({
         if (Math.abs(dx) < 250)
         {
             this.isSelect = false
-            this.node.setPositionX(this.cardPosition.x + dx)
+            this.node.setPositionX(this.cardPosition.x + dx/250 * 30)
+            this.node.rotation = dx/250 * 11
 
             if(this.lastDir != this.isLeft)
             {//左右切换了
@@ -114,7 +115,10 @@ cc.Class({
     //触摸取消
     ontouchCancel:function(){
         if(this.cardPosition)
+        {
+            this.node.rotation = 0
             this.node.setPosition(this.cardPosition)
+        }
 
         this.chooseLabel.string = ""
     },
@@ -122,7 +126,10 @@ cc.Class({
     //触摸结束
     ontouchEnd : function (event) {
         if(this.cardPosition)
+        {
+            this.node.rotation = 0
             this.node.setPosition(this.cardPosition)
+        }
 
         if(this.game.isKing() )
         {//国王

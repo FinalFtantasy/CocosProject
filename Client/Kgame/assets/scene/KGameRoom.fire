@@ -1390,8 +1390,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 880
+      "width": 990,
+      "height": 1100
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -1400,7 +1400,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -7,
-      "y": 306
+      "y": 175
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -1420,14 +1420,14 @@
     "_useOriginalSize": false,
     "_actualFontSize": 60,
     "_fontSize": 60,
-    "_lineHeight": 110,
-    "_enableWrapText": false,
+    "_lineHeight": 100,
+    "_enableWrapText": true,
     "_N$file": {
       "__uuid__": "659d5f7e-54c0-4c9a-af18-5d02c939d05b"
     },
     "_isSystemFontUsed": false,
     "_spacingX": 0,
-    "_N$string": "  一个国王，两个大臣。大臣轮流上\n书，国王抉择。\n  国王抉择影响4个属性。总轮10回\n合。\n  国王平衡4个属性获胜。反之大臣\n推翻政权\n  点击手牌可以查看详情，向上滑动\n出牌，左右滑动查看回答。",
+    "_N$string": "  一个国王，两个大臣。大臣轮流上\n书，国王抉择。\n  国王抉择影响4个属性。共10回合。\n  国王平衡4个属性坚持到最后获胜。\n反之大臣掀起叛乱推翻政权。\n  点击手牌可以查看详情，向上滑动\n出牌，左右滑动查看回答。\n  创建房间的人是国王，国王才能开\n始游戏，想换角色暂时请商量好重新\n开房。\n  加载场景有些慢，请耐心等待。",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 0,
     "_N$fontFamily": "Arial",
